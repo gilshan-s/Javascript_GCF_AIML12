@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+// ==========================
+// 1. STRING INITIALIZATION
+// ==========================
+let str1 = "Hello";        // double quotes
+let str2 = 'World';        // single quotes
+
+console.log("String 1:", str1);
+console.log("String 2:", str2);
+
+// ==========================
+// 2. SINGLE vs DOUBLE QUOTES (NESTING)
+// ==========================
+
+// Double outside, single inside
+let msg1 = "He said 'Hello'";
+console.log(msg1);
+
+// Single outside, double inside
+let msg2 = 'She said "Hi"';
+console.log(msg2);
+
+// Wrong (will give error)
+// let msg3 = "He said "Hello""; ❌
+
+// ==========================
+// 3. STRING OPERATIONS
+// ==========================
+let text = "JavaScript";
+
+console.log("Length:", text.length);
+console.log("Uppercase:", text.toUpperCase());
+console.log("Lowercase:", text.toLowerCase());
+console.log("Substring:", text.substring(0,4));
+console.log("Replace:", text.replace("Java", "Type"));
+document.write("Length:", text.length, "<br>");
+document.write("Uppercase:", text.toUpperCase(), "<br>");
+document.write("Lowercase:", text.toLowerCase(), "<br>");
+document.write("Substring:", text.substring(0,4), "<br>");
+document.write("Replace:", text.replace("Java", "Type"), "<br>");
+document.write("Concatenation:", text + " Language", "<br>");
+
+// ==========================
+// 4. eval() FUNCTION
+// ==========================
+// Evaluates string as JavaScript code
+
+let exp = "10 + 5 * 2";
+let result = eval(exp);
+
+console.log("Eval Result:", result); // 20
+
+// ⚠️ Warning: eval() is risky,avoid in real apps
+
+// ==========================
+// 5. toFixed()
+// ==========================
+// Rounds number to fixed decimals
+
+let num1 = 12.34567;
+console.log("toFixed(2):", num1.toFixed(2)); // 12.35
+
+// ==========================
+// 6. toLocaleString()
+// ==========================
+// Formats number based on locale
+
+let num2 = 1234567.89;
+
+console.log("US Format:", num2.toLocaleString("en-US"));
+console.log("India Format:", num2.toLocaleString("en-IN"));
+
+// ==========================
+// 7. toPrecision()
+// ==========================
+// Formats number to specified total digits
+
+let num3 = 123.456;
+
+console.log("toPrecision(4):", num3.toPrecision(4)); // 123.5
+console.log("toPrecision(2):", num3.toPrecision(2)); // 1.2e+2
+
+</script>
+
+</body>
+</html>

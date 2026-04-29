@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+const now = new Date();
+
+console.log("Full Date:", now);
+console.log("Year:", now.getFullYear());
+console.log("Month:", now.getMonth() + 1); // 0-based
+console.log("Date:", now.getDate());
+console.log("Hours:", now.getHours());
+console.log("Minutes:", now.getMinutes());
+console.log("Seconds:", now.getSeconds());
+
+document.write("Full Date:", now, "<br>");
+document.write("Year:", now.getFullYear(),"<br>");
+document.write("Month:", now.getMonth() + 1,"<br>"); // 0-based
+document.write("Date:", now.getDate(),"<br>");
+document.write("Hours:", now.getHours(),"<br>");
+document.write("Minutes:", now.getMinutes(),"<br>");
+document.write("Seconds:", now.getSeconds(),"<br>");
+
+ const date = new Date();
+
+//MM/DD/YYYY
+let usFormat = (date.getMonth() + 1) + "/" + (date.getDate() - 3) + "/" + date.getFullYear();"<br>";
+
+//DD/MM/YYYY
+let indiaFormat = (date.getDate()+ 3) + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();"<br>";
+
+document.write("US Format:", usFormat,"<br>");
+document.write("India Format:", indiaFormat,"<br>");
+
+const today = new Date();
+
+    </script>
+</body>
+</html>

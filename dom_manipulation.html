@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>DOM Manipulation Example</h2>
+
+<ul id="list">
+  <li>Item 2</li>
+</ul>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Item</button>
+<button onclick="changeBtn()">Change Button Name</button>
+
+<p id="para">Original Paragraph</p>
+
+<script>
+
+//prepend example
+function addItem() {
+  let li = document.createElement("li");
+  li.innerText = "Item 1";
+  document.getElementById("list").append(li);
+}
+
+// remove example
+function removeItem() {
+  document.getElementById("list").remove();
+}
+
+// change button text
+function changeBtn() {
+  document.querySelectorAll("button")[2].innerText = "Changed!Pune";
+}
+
+// before & after example
+let newHeading = document.createElement("h3");
+newHeading.innerText = "Inserted Before Paragraphvvvvvvvvv";
+
+document.getElementById("para").before(newHeading);
+
+let afterText = document.createElement("h4");
+afterText.innerText = "Inserted After Paragraph";
+
+document.getElementById("para").after(afterText);
+
+</script>
+
+</body>
+</html>

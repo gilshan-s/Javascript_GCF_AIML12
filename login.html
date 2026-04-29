@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARUL_UNIVERSITY</title>
+    <link rel="icon" href="/logo.jpeg" sizes="16*16">
+    <style>
+        body{
+            background-color: lightgray;
+            background-image: url("/image1.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+   <form action="" >
+    <h1>Welcome To Parul University</h1>
+    <fieldset>
+        <legend>Parul_Login_Page</legend>
+    Username:<input type="text"><br><br>
+    Password:<input type="password"><br><br>
+    <input type="submit" value="LOGIN" onclick="T1()">
+    
+    
+    </fieldset>
+   </form>
+<script>
+    function T1(){
+        alert("Welcome to Parul University")
+        document.write("<h1 style='color: blue;'>Welcome to Parul University</h1>")
+        console.log("Welcome to Parul University")
+    }
+    h1=document.getElementsByTagName("h1")[0]
+    h1.style.color="red"
+
+    console.log(document.body)
+</script>
+
+</body>
+</html>

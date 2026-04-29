@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+
+<script>
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    console.log("First event");
+});
+
+btn.addEventListener("click", function() {
+    console.log("Second event");
+});
+</script>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<p id="text">Hello</p>
+<button id="btn">Change Text</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+    document.getElementById("text").innerText = "Text Changed!";
+});
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+
+<script>
+let button = document.getElementById("btn");
+
+button.addEventListener("click", function() {
+    alert("Button was clicked!");
+});
+</script>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+
+<script>
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    console.log("First event");
+});
+
+btn.addEventListener("click", function() {
+    console.log("Second event");
+});
+</script>
+
+</body>
+</html> -->
+
+
+<!-- Summary
+addEventListener = attach event to element
+Supports multiple handlers
+Works for all user interactions
+Better than inline events -->

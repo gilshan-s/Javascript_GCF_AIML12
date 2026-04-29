@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+ name : 'John',
+ tech : 'JS',
+ laptop : {  
+ cpu : 'i7',
+ram : '4GB',
+brand : 'dell'
+}
+}
+// to access all the properties of person
+for(let key in person)
+console.log(key, person[key]) 
+// to access only properties of laptop
+for(let key in person.laptop)
+console.log(key, person.laptop[key])
+    </script>
+</body>
+</html>

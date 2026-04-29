@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>WebSocket Example</h2>
+<button onclick="sendMessage()">Send Message</button>
+
+<script>
+// Create WebSocket connection
+let socket = new WebSocket("ws://localhost:3000");
+
+//Connection opened
+socket.onopen = function() {
+console.log("Connected to server");
+socket.send("Hello Server!");
+};
+
+// Receive message from server
+socket.onmessage = function(event) {
+console.log("Server says: " + event.data);
+};
+
+// Send message
+function sendMessage() {
+socket.send("Hello again!");
+}
+
+// Connection closed
+socket.onclose = function() {
+console.log("Connection closed");
+};
+</script>
+
+</body>
+</html>

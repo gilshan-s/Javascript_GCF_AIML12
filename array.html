@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          var Product_Info=[1001,"Mobile",29000,"Samsung"]
+        document.write("Product_Details are:"+Product_Info)
+        document.write("<br>")
+        window.alert("Product_Details:"+Product_Info)
+        //   document.write("Product_Details are:"+Product_Info[0],"<br>",Product_Info[1],"<br>",Product_Info[2],"<br>",Product_Info[3]    ) //how to access array elements
+        //     document.write("<br>")
+        // Product_Info[1]="TV"
+        // document.write("Product_Details are:"+Product_Info)
+        //  document.write("<br>")
+        //  Product_Info[4]="LED"
+        //  document.write("Product_Details are:"+Product_Info)
+        //  document.write("<br>")
+        //  document.write("The length of the array is:"+Product_Info.length) //to find length of array
+        // Product_Info.push(25000)
+        // document.write("updated array is:"+Product_Info)
+        // document.write("<br>")
+        // Product_Info.pop()
+        // document.write("last element of array is removed new array is:"+Product_Info)
+        // document.write("<br>")
+        // Product_Info.unshift("Bullet")
+        // document.write("updated array is:"+Product_Info)
+        // document.write("<br>")
+        // Product_Info.shift()
+        // document.write("updated array is:"+Product_Info)
+        // document.write("<br>")
+        document.write("Index of 29000 is:"+Product_Info.indexOf(29000))
+        console.log(Product_Info.indexOf(29000))
+        document.write("<br>") 
+        document.write("Index of 49000 is:"+Product_Info.indexOf(49000))
+        console.log(Product_Info.indexOf(49000))
+        document.write("<br>")
+        document.write("Slicing in js: "+Product_Info.slice(0,3)) 
+        document.write("<br>")
+        document.write("Slicing",Product_Info.slice())
+
+
+
+    </script>
+</body>
+</html>

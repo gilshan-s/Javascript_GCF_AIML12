@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var movie={
+            name:'Bahubali',
+            year:2016,
+            hero:'prabhas',
+        };
+        document.write(movie.name,"<br>")
+        document.write(movie["hero"],"<br>")
+        movie["director"]="S.S.Rajamouli"
+        document.write(movie.director,"<br>")
+        movie["hero"]="pk"
+        document.write(movie["hero"],"<br>")
+        JSON.stringify(movie) // it converts the object into string 
+        document.write(JSON.stringify(movie),"<br>") // it converts the object into string and prints it on the webpage
+        console.log(movie) // it prints the object in the console
+        console.log(JSON.stringify(movie)) // it converts the object into string and prints it in the console
+        console.table(movie) // it prints the object in the form of table in the console   
+   </script>
+</body>
+</html>

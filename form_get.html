@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="myForm">
+  Name: <input type="text" id="name"><br><br>
+  
+ // Gender:
+  <input type="radio" name="gender" value="Male"> Male
+  <input type="radio" name="gender" value="Female"> Female<br><br>
+  
+  //Skills:
+  <input type="checkbox" id="js"> JS
+  <input type="checkbox" id="python"> Python<br><br>
+  
+  //City:
+  <select id="city">
+    <option>Ahmedabad</option>
+    <option>Delhi</option>
+  </select><br><br>
+
+  <button type="button" onclick="getData()">Submit</button>
+</form>
+
+<script>
+function getData() {
+  let name = document.getElementById("name").value;
+
+  let gender = "";
+  let radios = document.getElementsByName("gender");
+  for (let r of radios) {
+    if (r.checked) gender = r.value;
+  }
+
+  let skills = [];
+  if (document.getElementById("js").checked) skills.push("JS");
+  if (document.getElementById("python").checked) skills.push("Python");
+
+  let city = document.getElementById("city").value;
+
+  alert("Name: " + name + "\nGender: " + gender +
+        "\nSkills: " + skills + "\nCity: " + city);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <center>
+    <hr>
+    <h1><tt>WELCOME TO Parul STUDENT_LOGIN</tt></h1>
+    <hr>
+    </center>
+    <br>
+
+    <fieldset>
+        <legend>STUDENT_LOGIN</legend>
+        <center>
+            <table border="7">
+                <form action="" method="post" onsubmit="return test_Case1()">
+                <tr>
+                    <td><label for="">User_Name</label></td>
+                    <td><input type="text" placeholder="username" id="A" autocomplete="off"></td>
+                    <td><span id="AAA"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="">Password</label></td>
+                    <td><input type="password" placeholder="password" id="B" autocomplete="off"></td>
+                    <td><span id="BBB"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="IHUB_LOGIN">
+                        <input type="reset" value="RESET">
+                    
+                    </td>
+                </tr>
+                </form>
+
+            </table>
+        </center>
+    </fieldset>
+
+    <script>
+        function  test_Case1()
+        {
+            var username=document.getElementById('A').value 
+            var password=document.getElementById('B').value
+            var A=username.match(/[A-Z]{1}[a-z]*[_]{1}[0-9]{5}/g)
+            var B=password.match(/[A-Z]{1}[_]{1}[0-9]{7}/g)
+            if(username==""||username==null)
+            {
+                window.alert('User_Name is required')
+                document.getElementById('AAA').innerHTML="***User_Name is required***"
+                return false
+            }
+            else if(A==""||A==null)
+            {
+                window.alert(username+":In_Valid username")
+                document.getElementById('AAA').innerHTML=username+":In_Valid user_name:-->Ex:Rahul_12345"
+                return false
+            }
+            if(password==""||password==null)
+            {
+                window.alert('Password is required')
+                document.getElementById('BBB').innerHTML="***Password is required***"
+                return false
+            }
+            else if(B==""||B==null)
+            {
+                window.alert(password+":In_Valid password")
+                document.getElementById('BBB').innerHTML=password+":In_Valid password:-->Ex:R_1234567"
+                return false
+            }
+
+        
+
+
+        }
+    </script>
+    
+</body>
+</html>

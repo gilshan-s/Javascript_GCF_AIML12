@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head><title>Parameters & Return</title></head>
+<body style="font-family:sans-serif;padding:24px;background:#f8f9fa">
+
+  <h2>Multiply Numbers</h2>
+
+  <input id="n1" type="number" placeholder="Number 1"
+    style="padding:8px 12px;border:1px solid #ccc;border-radius:6px;
+           font-size:1rem;width:130px">
+
+  <input id="n2" type="number" placeholder="Number 2"
+    style="padding:8px 12px;border:1px solid #ccc;border-radius:6px;
+           font-size:1rem;width:130px;margin-left:8px">
+
+  <button onclick="calculate()"
+    style="margin-left:8px;padding:8px 18px;background:#f7df1e;border:none;
+           border-radius:6px;cursor:pointer;font-weight:700;font-size:1rem">
+    Multiply
+  </button>
+
+  <div id="output" style="margin-top:16px;line-height:2;font-size:0.95rem"></div>
+
+  <script>
+    // Parameter: a, b — placeholders defined here
+    function multiply(a, b) {
+      return a * b;  // return sends result back
+    }
+
+    function calculate() {
+      let a = Number(document.getElementById("n1").value);
+      let b = Number(document.getElementById("n2").value);
+
+      if (!document.getElementById("n1").value ||
+          !document.getElementById("n2").value) {
+        document.getElementById("output").innerHTML =
+          "<b style='color:red'>Please enter both numbers.</b>";
+        return;
+      }
+
+      // Argument: a, b — actual values passed here
+      let result = multiply(a, b);
+
+      document.getElementById("output").innerHTML =
+        "<b>multiply(" + a + ", " + b + ")</b> returned: " +
+        "<b style='color:#e07b00'>" + result + "</b>";
+    }
+  </script>
+
+</body>
+</html>

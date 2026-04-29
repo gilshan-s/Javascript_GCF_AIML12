@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Form</title>
+</head>
+
+<body onload="pageLoaded()">
+
+<h2 onmouseover="hoverTitle(this)" onmouseout="normalTitle(this)">
+    Student Registration
+</h2>
+
+<form onsubmit="return validateForm()">
+
+    <!-- Name -->
+    <input type="text" id="name" placeholder="Enter Name"
+           onfocus="focusField(this)"
+           onblur="blurField(this)"
+           onkeyup="showLength(this)">
+    <span id="msg"></span>
+    <br><br>
+
+    <!-- Age -->
+    <input type="text" id="age" placeholder="Enter Age"
+           onkeypress="allowOnlyNumbers(event)"
+           onkeyup="liveAgeCheck(this)">
+    <br><br>
+
+    <!-- Country -->
+    <select id="country" onchange="countryChanged(this)">
+        <option value="">Select Country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+    </select>
+    <br><br>
+
+    <!-- Button -->
+    <button type="submit" onclick="buttonClick()">
+        Submit
+    </button>
+
+</form>
+
+<script>
+
+// 🔹 onload
+function pageLoaded(){
+    alert("Page Loaded Successfully");
+
+    // Prepopulate
+    // document.getElementById("name").value = "Mani";
+}
+
+// 🔹 onfocus
+function focusField(el){
+    el.style.background = "lightblue";
+}
+
+// 🔹 onblur
+function blurField(el){
+    el.style.background = "white";
+}
+
+// 🔹 onkeyup (live text length)
+function showLength(el){
+    document.getElementById("msg").innerText =
+        "Length: " + el.value.length;
+}
+
+// 🔹 onkeypress (masking numbers only)
+function allowOnlyNumbers(e){
+    if(e.key < '0' || e.key > '9'){
+        e.preventDefault();
+    }
+}
+
+// 🔹 onkeyup (live validation)
+function liveAgeCheck(el){
+    if(isNaN(el.value)){
+        el.style.border = "2px solid red";
+    } else {
+        el.style.border = "2px solid green";
+    }
+}
+
+// 🔹 onchange
+function countryChanged(el){
+    alert("Selected: " + el.value);
+}
+
+// 🔹 onclick
+function buttonClick(){
+    console.log("Button Clicked");
+}
+
+// 🔹 onmouseover
+function hoverTitle(el){
+    el.style.color = "red";
+}
+
+// 🔹 onmouseout
+function normalTitle(el){
+    el.style.color = "black";
+}
+
+// 🔹 onsubmit (validation)
+function validateForm(){
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    if(name.trim() === ""){
+        alert("Name required");
+        return false;
+    }
+
+    if(isNaN(age) || age === ""){
+        alert("Invalid age");
+        return false;
+    }
+
+    alert("Form Submitted!");
+    return true;
+}
+
+</script>
+<!-- | Feature           | Concept                     |
+| ----------------- | --------------------------- |
+| Page load alert   | `onload`                    |
+| Input highlight   | `onfocus`, `onblur`         |
+| Live typing check | `onkeyup`                   |
+| Restrict numbers  | `onkeypress`                |
+| Dropdown change   | `onchange`                  |
+| Button click      | `onclick`                   |
+| Hover effect      | `onmouseover`, `onmouseout` |
+| Form validation   | `onsubmit`                  | -->
+
+</body>
+</html>
